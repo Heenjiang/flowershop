@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.application.Application?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.collections.ObservableList?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UIController">
+   <children>
+      <Button fx:id="addFlower" layoutX="20.0" layoutY="244.0" mnemonicParsing="false" onAction="#addFlower" prefHeight="66.0" prefWidth="157.0" text="Add flower" />
+       <ComboBox fx:id="combobox" editable="true" layoutX="99.0" layoutY="132.0" onAction="#onclickComboBox" prefHeight="30.0" prefWidth="177.0" promptText="chooseBouquet">
+      	      <items>
+		        <FXCollections fx:factory="observableArrayList">
+		          <String fx:value="bouquet 1" />
+		          <String fx:value="bouquet 2" />
+		          <String fx:value="bouquet 3" />
+		          
+		        </FXCollections>
+	      </items>
+      </ComboBox>
+      <Button fx:id="viewBouquet" layoutX="333.0" layoutY="122.0" mnemonicParsing="false" onAction="#onclickViewBouquet" prefHeight="50.0" prefWidth="141.0" text=" View Bouquet" />
+      <Button fx:id="exit" layoutX="395.0" layoutY="244.0" mnemonicParsing="false" onAction="#exit" prefHeight="66.0" prefWidth="157.0" text="EXIT" />
+      <Button fx:id="showflowers" layoutX="206.0" layoutY="244.0" mnemonicParsing="false" onAction="#showAllFlowers" prefHeight="66.0" prefWidth="157.0" text="show all flowers" />
+      <Label contentDisplay="CENTER" layoutX="63.0" layoutY="14.0" prefHeight="87.0" prefWidth="523.0" text="Welcome to flowers shop" textAlignment="RIGHT" textFill="#e11111" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

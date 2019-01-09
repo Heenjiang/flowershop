@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.application.Application?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.collections.ObservableList?>
+
+<Pane fx:id="bouquetPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.viewBouquetController">
+   <children>
+       <ComboBox fx:id="combobox" editable="true" layoutX="273.0" layoutY="340.0" onAction="#onclickComboBox" prefHeight="31.0" prefWidth="224.0" promptText="Select root length range">
+      	      <items>
+		        <FXCollections fx:factory="observableArrayList">
+		          <String fx:value="5.0-10.0" />
+		          <String fx:value="10.0-15.0" />
+		          <String fx:value="0-5.0" />
+		          
+		        </FXCollections>
+	      </items>
+      </ComboBox>
+      <Button fx:id="sort" layoutX="14.0" layoutY="329.0" mnemonicParsing="false" onAction="#sort" prefHeight="52.0" prefWidth="248.0" text="sort by freshness" textFill="#a82f2f">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutY="-1.0" mnemonicParsing="false" onAction="#backMenue" prefHeight="31.0" prefWidth="61.0" text="back" />
+      <Button fx:id="select" layoutX="516.0" layoutY="340.0" mnemonicParsing="false" onAction="#showSelect" text="select" />
+      <Pane fx:id="showpane" layoutX="5.0" layoutY="38.0" prefHeight="291.0" prefWidth="591.0" />
+   </children>
+</Pane>
